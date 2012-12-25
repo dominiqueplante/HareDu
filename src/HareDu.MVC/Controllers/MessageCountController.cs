@@ -1,6 +1,6 @@
 using System.Web.Mvc;
 
-namespace MvcApplication2.Controllers
+namespace HareDu.MVC.Controllers
 {
     public class MessageCountController : Controller
     {
