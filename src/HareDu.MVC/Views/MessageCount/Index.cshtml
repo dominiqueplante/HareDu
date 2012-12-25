@@ -1,0 +1,48 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>title</title>
+        <link href="~/HareDu/MessageQueueTicker.css" rel="stylesheet" />
+    </head>
+<body>
+    <h1>HareDu Message Queue Monitor</h1>
+
+    <input type="button" id="open" value="Open Market" />
+    <input type="button" id="close" value="Close Market" disabled="disabled" />
+    <input type="button" id="reset" value="Reset" />
+
+    <h2>Live Message Queue Table</h2>
+    <div id="stockTable">
+        <table border="1">
+            <thead>
+                <tr><th>Queue</th><th>Count</th><th>Open</th><th>High</th><th>Low</th><th>Change</th><th>%</th></tr>
+            </thead>
+            <tbody>
+                <tr class="loading"><td colspan="7">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Live Message Queue Ticker</h2>
+    <div id="stockTicker">
+        <div class="inner">
+            <ul>
+                <li class="loading">loading...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="~/bundles/jquery"></script>
+    <script src="~/bundles/jquerycolor"></script>
+    <script src="~/Scripts/jquery.signalR-1.0.0-rc1.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/HareDu/HareDu.js"></script>
+</body>
+</html>
